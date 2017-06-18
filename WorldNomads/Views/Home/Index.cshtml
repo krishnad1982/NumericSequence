@@ -1,1 +1,36 @@
-﻿<h2>Welcome to ASP.NET MVC @ViewData["Version"] on @ViewData["Runtime"]!</h2>
+﻿@model WorldNomads.ViewModels.CalculateViewModel
+
+<div class="row">
+  <div class="col-lg-12">
+		
+    <div class="input-group">
+      <input type="text" id="txtNumber" name="inputNumber" class="form-control" placeholder="Input Number" 
+				onkeypress="if(validateWholeNumber(this)){ $('#error').hide();return;}else{ $('#error').show();return;}" required="true"/>
+      <span class="input-group-btn">
+        <button id="btnSubmit" name="btnCalculate"class="btn btn-default" type="submit" onclick="getSequenceDetails()">Calculate</button>
+      </span>
+				
+    </div><!-- /input-group -->
+		
+		<div id= "error" class="bs-example" style="display:none">
+    <div class="alert alert-danger fade in">
+        <strong>Error: </strong> Input is invalid. We only accepts whole numbers.
+    </div>
+  </div><!-- /.col-lg-12 -->
+</div><!-- /.row -->
+
+	<br/><br/>
+<div class="row">	
+    <div class="col-lg-12">
+        <div id="sequence" class="well" style="float: left; width: 180px; word-wrap: break-word;"></div>
+        <div id="evenSequence" class="well" style="float: left; width: 180px; word-wrap: break-word;"></div>
+        <div id="oddSequence" class="well" style="float: left; width: 180px; word-wrap: break-word;"></div>
+		<div id="fibSequence" class="well" style="float: left; width: 250px; word-wrap: break-word;"></div>
+		<div id="condSequence" class="well" style="float: left; width: 250px; word-wrap: break-word;"></div>	
+    </div>
+</div>
+
+	
+
+       
+	

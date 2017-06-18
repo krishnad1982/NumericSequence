@@ -7,7 +7,7 @@ using System.Collections;
 namespace WorldNomads.Tests.Controllers
 {
     [TestFixture]
-    public class HomeControllerTest
+    public class CalculateSequence
     {
         [Test]
         public void Sequence_Test()
